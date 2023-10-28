@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.4.1"
+  },
+  "scripts": {
+    "mx:dev": "pnpm -r --filter=./projects/mx/ run dev"
+  }
+}
