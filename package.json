@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lerna exec -- npx --no-install commitlint --edit $1"
+      "pre-commit": "npm run commitlint"
     }
   }
 }
