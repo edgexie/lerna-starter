@@ -18,5 +18,6 @@
   },
   "scripts": {
     "test": "node ./__tests__/@mx/button.test.js"
-  }
+  },
+  "gitHead": "086e36a87a6ac720a169cf39e1faec3c51e8dbd2"
 }

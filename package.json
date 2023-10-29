@@ -1,11 +1,19 @@
 {
   "name": "root",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "husky": "^8.0.3",
     "lerna": "^7.4.1"
   },
   "scripts": {
-    "mx:dev": "pnpm -r --filter=./projects/mx/ run dev"
+    "mx:dev": "pnpm -r --filter=./projects/mx/ run dev",
+    "commitlint": "commitlint --edit"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna exec -- npx --no-install commitlint --edit $1"
+    }
   }
 }
