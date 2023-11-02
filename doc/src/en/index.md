@@ -1,5 +1,5 @@
 <script setup>
-import { data as posts } from '/data/posts.data.ts'
+import { data as posts } from '/data/posts.data.mts'
 </script>
 
 <template>
