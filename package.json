@@ -4,12 +4,18 @@
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
+    "@mx/button": "workspace:^",
     "husky": "^8.0.3",
-    "lerna": "^7.4.1"
+    "lerna": "^7.4.1",
+    "naive-ui": "^2.35.0",
+    "vitepress": "1.0.0-rc.24"
   },
   "scripts": {
     "mx:dev": "pnpm -r --filter=./projects/mx/ run dev",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "docs:dev": "vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc"
   },
   "husky": {
     "hooks": {
