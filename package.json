@@ -21,6 +21,5 @@
     "hooks": {
       "pre-commit": "npm run commitlint"
     }
-  },
-  "type": "module"
+  }
 }
