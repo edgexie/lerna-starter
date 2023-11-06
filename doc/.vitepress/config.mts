@@ -11,6 +11,9 @@ export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
   appearance: 'dark',
+  markdown: {
+    lineNumbers: true,
+  },
   themeConfig: {
     lastUpdated: {
       text: '最后更新时间：',
@@ -34,6 +37,16 @@ export default defineConfig({
           base: '/cn/comprehensive-front-end/js-docs/',
           collapsed: false,
           items: [{ text: '书写规范', link: '书写规范' }],
+        },
+        {
+          text: 'NestJS',
+          base: '/cn/comprehensive-front-end/nestjs/',
+          collapsed: false,
+          items: [
+            { text: 'Get start', link: '开始' },
+            { text: '控制器', link: '控制器' },
+            { text: '中间件', link: '中间件' },
+          ],
         },
       ],
       '/cn/mx-components/': [

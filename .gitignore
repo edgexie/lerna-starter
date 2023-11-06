@@ -1,4 +1,4 @@
 node_modules/
 lerna-debug.log
-doc/.vitepress/dist
-doc/.vitepress/cache
+**/.vitepress/dist
+**/.vitepress/cache
