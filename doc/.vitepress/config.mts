@@ -46,6 +46,8 @@ export default defineConfig({
             { text: 'Get start', link: '开始' },
             { text: '控制器', link: '控制器' },
             { text: '中间件', link: '中间件' },
+            { text: '异常过滤器', link: '异常过滤器' },
+            { text: '管道', link: '管道' },
           ],
         },
       ],
