@@ -48,6 +48,7 @@ export default defineConfig({
             { text: '中间件', link: '中间件' },
             { text: '异常过滤器', link: '异常过滤器' },
             { text: '管道', link: '管道' },
+            { text: '守卫', link: '守卫' },
           ],
         },
       ],
