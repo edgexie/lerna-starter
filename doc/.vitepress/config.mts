@@ -21,26 +21,42 @@ export default defineConfig({
     logo: '/favicon_io/favicon-32x32.png',
     nav: [
       { text: '首页', link: '/' },
-      { text: '大前端', link: '/cn/comprehensive-front-end/rank' },
-      { text: 'Mx组件', link: '/cn/mx-components/' },
+      {
+        text: '前端基础',
+        link: '/cn/front-end/base/rank',
+        activeMatch: '/front-end/base/',
+      },
+      {
+        text: '前端框架',
+        link: '/cn/front-end/frame/vue/',
+        activeMatch: '/front-end/frame/',
+      },
+      {
+        text: '后端技术',
+        link: '/cn/back-end/nestjs/开始',
+        activeMatch: '/back-end/',
+      },
+      { text: '工程化', link: '/cn/engineering/' },
+      {
+        text: 'Mx组件',
+        link: '/cn/mx-components/',
+        activeMatch: '/mx-components/',
+      },
     ],
 
     sidebar: {
-      '/cn/comprehensive-front-end/': [
+      '/cn/front-end/base/': [
         {
           text: '前端职级与招聘',
-          base: '/cn/comprehensive-front-end/',
+          base: '/cn/front-end/base/',
           link: 'rank',
         },
-        {
-          text: 'JavaScript',
-          base: '/cn/comprehensive-front-end/js-docs/',
-          collapsed: false,
-          items: [{ text: '书写规范', link: '书写规范' }],
-        },
+        { text: '书写规范', base: '/cn/front-end/base/', link: '书写规范' },
+      ],
+      '/cn/back-end/nestjs/': [
         {
           text: 'NestJS',
-          base: '/cn/comprehensive-front-end/nestjs/',
+          base: '/cn/back-end/nestjs/',
           collapsed: false,
           items: [
             { text: 'Get start', link: '开始' },
@@ -49,6 +65,7 @@ export default defineConfig({
             { text: '异常过滤器', link: '异常过滤器' },
             { text: '管道', link: '管道' },
             { text: '守卫', link: '守卫' },
+            { text: '拦截器', link: '拦截器' },
           ],
         },
       ],
