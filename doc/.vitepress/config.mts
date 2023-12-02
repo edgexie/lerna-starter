@@ -66,6 +66,8 @@ export default defineConfig({
             { text: '管道', link: '管道' },
             { text: '守卫', link: '守卫' },
             { text: '拦截器', link: '拦截器' },
+            { text: '自定义装饰器', link: '自定义装饰器' },
+            { text: '与MySQL', link: '与MySQL' },
           ],
         },
       ],

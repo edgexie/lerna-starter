@@ -8,7 +8,7 @@
     "husky": "^8.0.3",
     "lerna": "^7.4.1",
     "naive-ui": "^2.35.0",
-    "vitepress": "1.0.0-rc.24"
+    "vitepress": "1.0.0-rc.31"
   },
   "scripts": {
     "mx:dev": "pnpm -r --filter=./projects/mx/ run dev",
