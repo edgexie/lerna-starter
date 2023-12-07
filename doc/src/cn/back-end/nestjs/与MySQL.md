@@ -26,22 +26,43 @@ npm install --save @nestjs/typeorm typeorm mysql2
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'], // 实体类所在的路径
-      synchronize: true, // 开发阶段可以使用自动同步（慎用于生产环境）
+    // 根据环境选择相应的数据库信息
+    TypeOrmModule.forRootAsync({
+      useFactory({
+        type: 'mysql',
+        host: process.env.HOST,
+        port: Number(process.env.PORT),
+        username: process.env.USER_NAME,
+        password: process.env.PASSWORD,
+        database: process.env.DATA_BASE,
+        connectorPackage: 'mysql2',
+        // entities: [__dirname + '/**/*.entity{.ts,.js}'], // 实体类所在的路径
+        autoLoadEntities: true, // 自动加载实体,指定该选项后，通过 forFeature() 方法注册的每个实体都将自动添加到配置对象的 entities 数组中。
+        synchronize: true,
+      }),
     }),
+    ConfigModule.forRoot({
+      envFilePath:
+        process.env.NODE_ENV === 'production'
+          ? '.env.production'
+          : '.env.development',
+    }), // 需要安装 @nestjs/config 包
     UsersModule,
   ],
 })
 export class AppModule {}
+```
+
+```bash [.env.development]
+# production 也是这
+HOST=地址
+PORT=端口
+USER_NAME=用户名
+PASSWORD=密码
+DATA_BASE=数据库名
 ```
 
 ```ts [实体]{2}
