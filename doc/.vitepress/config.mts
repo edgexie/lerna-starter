@@ -28,7 +28,7 @@ export default defineConfig({
       },
       {
         text: '前端进阶',
-        link: '/cn/front-end/frame/vue',
+        link: '/cn/front-end/frame/vue/',
         activeMatch: '/front-end/frame',
       },
       {
