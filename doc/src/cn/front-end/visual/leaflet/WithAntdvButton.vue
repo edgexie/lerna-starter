@@ -35,7 +35,17 @@ onMounted(() => {
     ).addTo(map);
 
     const popup = L.popup().setContent(popupContent.$el);
-    L.marker(latLng).bindPopup(popup).addTo(map).openPopup();
+    L.marker(latLng, {
+      icon: L.icon({
+        iconUrl:
+          'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+        iconSize: [26, 42],
+        popupAnchor: [0, -18],
+      }),
+    })
+      .bindPopup(popup)
+      .addTo(map)
+      .openPopup();
   });
 });
 </script>
