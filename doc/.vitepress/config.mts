@@ -27,9 +27,14 @@ export default defineConfig({
         activeMatch: '/front-end/base/',
       },
       {
-        text: '前端框架',
-        link: '/cn/front-end/frame/vue/',
-        activeMatch: '/front-end/frame/',
+        text: '前端进阶',
+        link: '/cn/front-end/frame/vue',
+        activeMatch: '/front-end/frame',
+      },
+      {
+        text: '可视化',
+        link: '/cn/front-end/visual/leaflet/with-antdv-button',
+        activeMatch: '/front-end/visual',
       },
       {
         text: '后端技术',
@@ -48,15 +53,33 @@ export default defineConfig({
       '/cn/front-end/base/': [
         {
           text: '前端职级与招聘',
-          base: '/cn/front-end/base/',
+          base: './',
           link: 'rank',
         },
-        { text: '书写规范', base: '/cn/front-end/base/', link: '书写规范' },
+        { text: '书写规范', base: './', link: '书写规范' },
+      ],
+      '/cn/front-end/frame/': [
+        {
+          text: 'vue',
+          base: './',
+        },
+      ],
+      '/cn/front-end/visual/': [
+        {
+          text: 'leaflet',
+          base: './',
+          items: [
+            {
+              text: '使用a-button',
+              link: 'with-antdv-button',
+            },
+          ],
+        },
       ],
       '/cn/back-end/nestjs/': [
         {
           text: 'NestJS',
-          base: '/cn/back-end/nestjs/',
+          base: './',
           collapsed: false,
           items: [
             { text: 'Get start', link: '开始' },
@@ -74,7 +97,7 @@ export default defineConfig({
       '/cn/mx-components/': [
         {
           text: '公共组件',
-          base: '/cn/mx-components/common-components/',
+          base: './common-components/',
           items: [{ text: '按钮', link: '按钮' }],
         },
       ],
