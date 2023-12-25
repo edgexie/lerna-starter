@@ -36,9 +36,6 @@ export default {
   Layout,
   enhanceApp(ctx) {
     const { app } = ctx;
-    app.config.globalProperties.$getUrl = (path) => {
-      return import.meta.env.VITE_URL + path;
-    };
     app.use(Button);
     app.use(Card);
     app.use(ConfigProvider);

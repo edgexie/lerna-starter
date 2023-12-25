@@ -11,10 +11,11 @@ outline: false
   import {ref} from 'vue'
   import { theme,message} from 'ant-design-vue';
   import {useData} from 'vitepress'
+  import {getUrl} from '/utils'
   const a = ref(true)
   const formState = ref({code: ''})
   const handleSubmit = ()=>{
-    fetch($getUrl('/auth/validate-code?code=')+ formState.value.code).then(res=>res.json()).then(res=>{
+    fetch(getUrl('/auth/validate-code?code=')+ formState.value.code).then(res=>res.json()).then(res=>{
       if(res.data) {
         message.success('验证成功');
         a.value = false

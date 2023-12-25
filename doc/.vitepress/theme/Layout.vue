@@ -49,7 +49,9 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
       <MyFooter></MyFooter>
     </template>
     <template #doc-top>
-      <StatisticsView></StatisticsView>
+      <ClientOnly>
+        <StatisticsView></StatisticsView>
+      </ClientOnly>
     </template>
   </Layout>
 </template>

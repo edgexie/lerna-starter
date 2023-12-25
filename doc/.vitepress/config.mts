@@ -136,4 +136,14 @@ export default defineConfig({
     //   // other locale specific properties...
     // },
   },
+  // plugins: [
+  //   {
+  //     install: (app) => {
+  //       // 全局方法示例
+  //       app.config.globalProperties.$getUrl = (path) => {
+  //         return import.meta.env.VITE_URL + path;
+  //       };
+  //     },
+  //   },
+  // ],
 });

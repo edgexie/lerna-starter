@@ -1,11 +1,12 @@
 <script setup>
 import { useRoute } from 'vitepress'
 import { watch, ref } from 'vue'
+import { getUrl } from '/utils'
 const route = useRoute()
 const count = ref('')
-count.value
+
 watch(() => route.path, (newPath) => {
-  fetch('http://localhost:3000/analysis/visit-count?path=' + newPath)
+  fetch(getUrl('/analysis/visit-count?path=') + newPath)
     .then(res => res.json())
     .then(res =>
       count.value = res.data.count
