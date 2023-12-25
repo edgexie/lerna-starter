@@ -15,9 +15,9 @@ onMounted(() => {
   import('leaflet').then((L) => {
     const popupContent = createApp(PopupContent, {
       onClick() {
-        console.log('我被点了');
+        alert('我被点了')
       },
-      btnName: 'a-button',
+      btnName: '按钮',
     }).mount('#myDomContainer');
     const map = L.map(myMap.value, {
       center: latLng,
@@ -53,7 +53,8 @@ onMounted(() => {
 .my-map {
   height: 400px;
   width: 100%;
-  transform: scale(1); /* 根据需要调整缩放比例 */
+  transform: scale(1);
+  /* 根据需要调整缩放比例 */
   color: black;
 }
 </style>

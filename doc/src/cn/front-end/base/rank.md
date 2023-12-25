@@ -12,7 +12,7 @@ Base 太原
 > 纸上得来终觉浅，绝知此事要躬行。
 > ―― 陆游《冬夜读书示子聿》
 
-![image.png](/rank1.png)
+![image.png](/rank1.png){data-zoomable}
 
 然后「多复盘多总结」
 

@@ -5,6 +5,7 @@ import { useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import { nextTick, provide } from "vue";
 import MyFooter from './MyFooter.vue'
+import StatisticsView from './StatisticsView.vue'
 const { Layout } = DefaultTheme
 const { isDark, frontmatter } = useData();
 
@@ -46,6 +47,9 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
   <Layout>
     <template #layout-bottom v-if="frontmatter.layout === 'home'">
       <MyFooter></MyFooter>
+    </template>
+    <template #doc-top>
+      <StatisticsView></StatisticsView>
     </template>
   </Layout>
 </template>
