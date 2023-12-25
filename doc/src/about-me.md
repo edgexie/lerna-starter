@@ -27,6 +27,7 @@ outline: false
   const {isDark} = useData() 
 </script>
 
+<ClientOnly>
 <div v-if="a">
   <a-config-provider
     :theme="{
@@ -39,7 +40,7 @@ outline: false
         <a-form-item label="邀请码">
           <a-input v-model:value="formState.code" />
         </a-form-item>
-        <a-form-item :wrapper-col="{ span: 2, offset: 20 }">
+        <a-form-item :wrapper-col="{ span: 24 }" style="text-align:right">
           <a-button type="primary" size="small" @click="handleSubmit">验证</a-button>
         </a-form-item>
       </a-form>
@@ -170,3 +171,4 @@ outline: false
 ![img](https://bucket.edgexie.top/for-work/power-2.png){data-zoomable}
 
 </div>
+</ClientOnly>
