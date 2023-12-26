@@ -91,6 +91,16 @@ export default defineConfig({
             { text: '拦截器', link: '拦截器' },
             { text: '自定义装饰器', link: '自定义装饰器' },
             { text: '与MySQL', link: '与MySQL' },
+            {
+              text: '实践',
+              base: './practice/',
+              items: [
+                {
+                  text: 'nestjs与vercel集成',
+                  link: 'intergrate-with-vercel',
+                },
+              ],
+            },
           ],
         },
       ],
