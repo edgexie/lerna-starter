@@ -11,6 +11,7 @@ export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
   appearance: 'dark',
+  ignoreDeadLinks: true,
   markdown: {
     lineNumbers: true,
   },

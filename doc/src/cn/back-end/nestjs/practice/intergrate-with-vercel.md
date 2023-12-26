@@ -114,3 +114,4 @@ $ git push
 - nestjs 项目，[地址](https://github.com/edgexie/intergrate-with-vercel)
 - 最终访问地址，https://intergrate-with-vercel.edgexie.top/
 - vercel.json 设置参考，[地址](https://vercel.com/docs/projects/project-configuration)
+- 这边文章同样发表在我的[博客]()上了
