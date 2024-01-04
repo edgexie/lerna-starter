@@ -15,6 +15,11 @@ import {
   Input,
   Alert,
   Space,
+  Popover,
+  Col,
+  Row,
+  Collapse,
+  CollapsePanel,
 } from 'ant-design-vue';
 // import Mx from "@mx/button";
 export default {
@@ -44,6 +49,11 @@ export default {
     app.use(Input);
     app.use(Alert);
     app.use(Space);
+    app.use(Popover);
+    app.use(Col);
+    app.use(Row);
+    app.use(Collapse);
+    app.use(CollapsePanel);
     // app.use(Mx);
     // register your custom global components
   },
